@@ -1,0 +1,3 @@
+[submodule ".submodules/geochemistry-helpers"]
+	path = .submodules/geochemistry-helpers
+	url = https://github.com/St-Andrews-Isotope-Geochemistry/geostats
