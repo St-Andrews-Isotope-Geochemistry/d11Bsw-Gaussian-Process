@@ -1,0 +1,5 @@
+.environment/
+Figures/
+**/__pycache__/**
+.vscode/
+profile
