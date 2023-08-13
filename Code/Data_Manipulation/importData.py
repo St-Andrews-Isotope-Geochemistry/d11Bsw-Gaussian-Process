@@ -41,8 +41,9 @@ def importData(name):
 
         probabilities = 0
         for d11Bsw_maximum in data_max["53.0Ma"].dropna().values:
-            distribution = Sampling.Distribution(d11Bsw_x,"Flat",(data_min["53.0Ma"].values[0],d11Bsw_maximum)).normalise()
-            probabilities += distribution.probabilities        
+            if d11Bsw_maximum>data_min["53.0Ma"].values[0]:
+                distribution = Sampling.Distribution(d11Bsw_x,"Flat",(data_min["53.0Ma"].values[0],d11Bsw_maximum)).normalise()
+                probabilities += distribution.probabilities        
 
         distributions += [Sampling.Distribution(d11Bsw_x,"Manual",probabilities,location=53.0).normalise()]
 
